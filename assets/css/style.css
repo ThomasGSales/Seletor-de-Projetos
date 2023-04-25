@@ -99,3 +99,8 @@ img:hover{
     box-shadow: 0 0 3px #77ffc0;
 }
 
+.desc {
+    
+    margin: 50% auto;
+    z-index: 10;
+}
