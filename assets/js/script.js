@@ -33,7 +33,8 @@ function mostrar1() {
         existeParagrafo.parentNode.removeChild(existeParagrafo)
     }
     
-    paragrafo.style.margin = "0 auto"
+    paragrafo.style.margin = "45px auto"
+    
 } 
 
 function mostrar2() {
@@ -68,7 +69,7 @@ function mostrar2() {
     paragrafo.appendChild(text)
     galleryDiv.appendChild(paragrafo)
 
-    paragrafo.style.margin = "0 auto"
+    paragrafo.style.margin = "45px auto"
     
 } 
 
@@ -105,7 +106,7 @@ function mostrar3() {
         existeParagrafo.parentNode.removeChild(existeParagrafo)
     }
 
-    paragrafo.style.margin = "0 auto"
+    paragrafo.style.margin = "45px auto"
 } 
 
 function mostrar4() {
@@ -140,7 +141,7 @@ function mostrar4() {
     paragrafo.appendChild(text)
     galleryDiv.appendChild(paragrafo)
 
-    paragrafo.style.margin = "0 auto"
+    paragrafo.style.margin = "45px auto"
     
 } 
 
@@ -177,7 +178,7 @@ function mostrar5() {
     galleryDiv.appendChild(paragrafo)
     
 
-    paragrafo.style.margin = "0 auto"
+    paragrafo.style.margin = "45px auto"
 } 
 
 

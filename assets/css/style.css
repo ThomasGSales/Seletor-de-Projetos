@@ -8,6 +8,9 @@
 body{
     width: 100vw;
     height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: rgb(12, 14, 36);
 }
 
 header {
@@ -26,7 +29,7 @@ h1 {
 }
 
 .filter-background {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -40,24 +43,41 @@ h1 {
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
 }
-.background-video{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -2;
-    object-fit: cover;
+.vertical-lines {
+   margin: 0;
+   z-index: -1;
+}
+.vertical-lines div {
+    display: flex; 
+    height: 100px;
+    width: 5px;
+    background-color: rgb(16, 3, 139);
+    box-shadow: 0 0 10px 1px rgb(16, 3, 139);
+    animation: background_animation calc(30s / var(--i)) linear infinite;
+    border-radius: 15px;
+}
+.vertical-lines div:nth-of-type(even){
+    background-color: blue;
+    box-shadow: 0 0 10px 1px blue;
+}
+
+@keyframes background_animation {
+    0% {
+        transform: translateX(0vw) translateY(-80vh) rotate(54deg); 
+    }
+    100% {
+        transform: translateX(100vw) translateY(-180vh) rotate(54deg);
+    }
 }
 
 img {
     margin: 7% auto;
     transition: 0.5s;
     border-radius: 10px;
-    box-shadow: 0 0 10px 0px #77ffc0;
+    box-shadow: 0 0 0px 1.5px #77ffc0;
 }
 img:hover{
-    box-shadow: 0 0 50px 10px #77ffc0;
+    box-shadow: -10px 15px 0px 0px #77ffc0;
     transform: scale(1.05, 1.05);
     cursor: pointer;
 }
@@ -77,6 +97,9 @@ img:hover{
     margin: 29% auto;
 }
 
+.border-linha {
+    margin: 150px auto;
+}
 .linha {
     display: flex;
     align-items: center;
@@ -97,6 +120,32 @@ img:hover{
     transform: scale(3, 3);
     cursor: pointer;
     box-shadow: 0 0 3px #77ffc0;
+}
+.text-linha {
+    margin: 50px auto;
+    transition: 0.5s;
+    animation: pulser_animation 5s ease infinite;
+}
+.text-linha p{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #77ffc0;
+    
+}
+
+@keyframes pulser_animation {
+    0% {
+        
+        transform: scale(1, 1);
+    } 50% {
+        
+        transform: scale(1.09, 1.09);
+    } 100% {
+        
+        transform: scale(1, 1);
+    }
 }
 
 .desc {
