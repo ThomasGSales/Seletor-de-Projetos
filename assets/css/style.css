@@ -176,3 +176,49 @@ img:hover{
     margin: 50% auto;
     z-index: 10;
 }
+
+@media only screen and (max-width: 950px){
+    h1{
+        color: red;
+    }
+
+    .vertical-lines div {
+       display: none;
+    }
+    .vertical-lines div:nth-of-type(even){
+        background-color: none;
+    }
+    .border-linha {
+        margin: 200px auto;
+    }
+    body {
+        background-color: rgb(75, 1, 1);
+    }
+    .points:hover {
+        transform: scale(2, 2);
+        box-shadow: 0 0 3px #ff0000;
+    }
+    .linha {
+        background-color: #ff0000;
+    }
+    .points {
+        background-color: #ff0000;
+        
+    }
+    .points:hover::before {
+        color: #fff;
+        font-size: 10px;
+    }
+    #gallery p {
+        color: #ff0000;
+    }
+    .text-linha p{
+        color: #ff0000;
+    }
+    img {
+        box-shadow: 0 0 0px 1.5px #ff0000;
+    }
+    img:hover {
+        box-shadow: -10px 15px 0px 0px #ff0000;
+    }
+}
