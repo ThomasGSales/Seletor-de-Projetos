@@ -14,7 +14,7 @@
     <header>
         <h1>THOMAS</h1>
     </header>
-
+  <div class="container">
     <div id="gallery">
         <p id="text-in-gallery">IMAGE PROJECT</p>
         <img src="assets/documents/Project-1.png" style="display: none;" alt="Project-Todo-List" id="todo-img">
@@ -26,16 +26,17 @@
 
     <div class="border-linha">
         <div class="linha">
-            <button class="points" onclick="mostrar1()" id="btn-todo"></button>
-            <button class="points" onclick="mostrar2()" id="btn-time"></button>
-            <button class="points" onclick="mostrar3()" id="btn-cube"></button>
-            <button class="points" onclick="mostrar4()" id="btn-login"></button>
-            <button class="points" onclick="mostrar5()" id="btn-spotify"></button>
+            <button data-tooltip="Todo List" class="points" onclick="mostrar1()" id="btn-todo"></button>
+            <button data-tooltip="Relogio" class="points" onclick="mostrar2()" id="btn-time"></button>
+            <button data-tooltip="Cubo" class="points" onclick="mostrar3()" id="btn-cube"></button>
+            <button data-tooltip="Tela de Login Responsivo" class="points" onclick="mostrar4()" id="btn-login"></button>
+            <button data-tooltip="Página do Spotify" class="points" onclick="mostrar5()" id="btn-spotify"></button>
         </div>
         <div class="text-linha">
             <p>Clique em um ponto na linha para ver um projeto</p>
         </div>
     </div>
+   </div>
 
     <!--Background-->
     <div class="filter-background">
@@ -60,7 +61,6 @@
             <div style="--i:18"></div>                      
         </div>
     </div>
-
 
 </body>
 </html>

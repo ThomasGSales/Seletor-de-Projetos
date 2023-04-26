@@ -11,6 +11,18 @@ body{
     overflow-y: hidden;
     overflow-x: hidden;
     background-color: rgb(12, 14, 36);
+    
+}
+.container {
+    animation: fade-in 2s ease-out forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
 }
 
 header {
@@ -121,6 +133,17 @@ img:hover{
     cursor: pointer;
     box-shadow: 0 0 3px #77ffc0;
 }
+.points:hover::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 3px;
+    color: #fff;
+    font-size: 6px;
+    white-space: nowrap;
+  }
 .text-linha {
     margin: 50px auto;
     transition: 0.5s;
