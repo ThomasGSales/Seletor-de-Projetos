@@ -184,8 +184,5 @@ function mostrar5() {
 
 
 
-document.getElementById("todo-img").addEventListener('click', function() {
-    window.open("pages/to-do-list", "_blank")
-})
 
 

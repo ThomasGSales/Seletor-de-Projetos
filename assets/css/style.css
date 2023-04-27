@@ -8,12 +8,15 @@
 body{
     width: 100vw;
     height: 100vh;
-    overflow-y: hidden;
     overflow-x: hidden;
     background-color: rgb(12, 14, 36);
-    
 }
 .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main {
     animation: fade-in 2s ease-out forwards;
 }
 
@@ -40,22 +43,10 @@ h1 {
     letter-spacing: 2px;
 }
 
-.filter-background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-.filter-background::before{
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-}
 .vertical-lines {
+   margin-top: 50px;
+   width: 100vw;
+   height: 300px;
    margin: 0;
    z-index: -1;
 }
@@ -63,22 +54,22 @@ h1 {
     display: flex; 
     height: 100px;
     width: 5px;
-    background-color: rgb(16, 3, 139);
-    box-shadow: 0 0 10px 1px rgb(16, 3, 139);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px 1px rgb(255, 255, 255);
     animation: background_animation calc(30s / var(--i)) linear infinite;
     border-radius: 15px;
 }
 .vertical-lines div:nth-of-type(even){
-    background-color: blue;
-    box-shadow: 0 0 10px 1px blue;
+    background-color: rgb(226, 226, 226);
+    box-shadow: 0 0 10px 1px rgb(206, 206, 206);
 }
 
 @keyframes background_animation {
     0% {
-        transform: translateX(0vw) translateY(-80vh) rotate(54deg); 
+        transform: translateX(30vw) translateY(-150vh) rotate(54deg); 
     }
     100% {
-        transform: translateX(100vw) translateY(-180vh) rotate(54deg);
+        transform: translateX(100vw) translateY(-250vh) rotate(54deg);
     }
 }
 
@@ -107,10 +98,11 @@ img:hover{
     justify-content: center;
     align-items: center;
     margin: 29% auto;
+    cursor: pointer;
 }
 
 .border-linha {
-    margin: 150px auto;
+    margin: 160px auto;
 }
 .linha {
     display: flex;
@@ -173,8 +165,17 @@ img:hover{
 
 .desc {
     
-    margin: 50% auto;
+    margin: 20% auto;
     z-index: 10;
+}
+
+.footer {
+    position: absolute;
+    background-color: rgb(255, 0, 0);
+    width: 100vw;
+    height: 800px;
+    z-index: 1;
+    
 }
 
 @media only screen and (max-width: 950px){
