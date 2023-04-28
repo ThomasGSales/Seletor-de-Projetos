@@ -230,10 +230,9 @@ img:hover{
 }
 
 .pre-rodape a{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 25px;
+    position: relative;
+    left: 49.5%;
+    font-size: 42px;
     letter-spacing: 2px;
     color: #77ffc0;
     cursor: pointer;
@@ -244,35 +243,81 @@ img:hover{
 @keyframes pre_rodape {
     0% {
         opacity: 0;
+        transform: translateY(0%);
     } 50% {
         opacity: 1;
+        transform: translateY(30%);
     } 100% {
         opacity: 0;
+        transform: translateY(0%);
     }
 }
 
 .footer {
     background-color: rgb(12, 14, 36);
     width: 100vw;
-    height: 600px;
+    height: 100%;
     position: relative;
     top: 100px;
     z-index: 1;
+    
+    
 }
+.certificados-container{
+   display: flex;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   gap: 1rem;
+}
+.certificados {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 700px;
+}
+.certificados img{
+    position: absolute;
+    width: 100%;
+    max-height: 500px;
+}
+.certs{
+    opacity: 0;
+    transition: 0.2s;
+}
+.on {
+    opacity: 1;
+}
+.certificados button{
+    color: #77ffc0;
+    font-size: 60px;
+    position: relative;
+    border: none;
+    width: 100px;
+    height: 100px;
+    background-color:transparent;
+    cursor: pointer;
+    z-index: 9;
+    left: -49%;
+}
+.certificados button:last-of-type{
+    left: 49%;
+}
+
+
 
 @media only screen and (max-width: 950px){
     h1{
         color: red;
     }
 
-    .vertical-lines div {
-       display: none;
-    }
-    .vertical-lines div:nth-of-type(even){
-        background-color: none;
+    .side {
+        display: none;
     }
     .border-linha {
-        margin: 200px auto;
+        margin-top: 100px;
     }
     body {
         background-color: rgb(75, 1, 1);
@@ -292,8 +337,11 @@ img:hover{
         color: #fff;
         font-size: 10px;
     }
+    #gallery {
+        margin-top: 100px;
+    }
     #gallery p {
-        color: #ff0000;
+       display: none;
     }
     .text-linha p{
         color: #ff0000;
@@ -303,5 +351,11 @@ img:hover{
     }
     img:hover {
         box-shadow: -10px 15px 0px 0px #ff0000;
+    }
+    .footer {
+        display: none;
+    }
+    .pre-rodape{
+        display: none;
     }
 }

@@ -1,6 +1,4 @@
 
-// Funções
-
 function mostrar1() {
     
     var galleryDiv = document.getElementById("gallery")
@@ -20,7 +18,7 @@ function mostrar1() {
     imgTodo.style.width = "300px"
     imgTodo.style.zIndex = "9"
     galleryDiv.style.border = "none"
-    document.getElementById("text-in-gallery").style.display = "none"
+    
 
     let paragrafo = document.createElement("p")
     let text = document.createTextNode("Projeto Todo List")
@@ -56,7 +54,7 @@ function mostrar2() {
     imgTime.style.width = "300px"
     imgTime.style.zIndex = "9"
     galleryDiv.style.border = "none"
-    document.getElementById("text-in-gallery").style.display = "none"
+    
 
     let existeParagrafo = document.querySelector("p")
     if(existeParagrafo){
@@ -92,7 +90,6 @@ function mostrar3() {
     imgCube.style.width = "300px"
     imgCube.style.zIndex = "9"
     galleryDiv.style.border = "none"
-    document.getElementById("text-in-gallery").style.display = "none"
 
     
     let paragrafo = document.createElement("p")
@@ -128,7 +125,7 @@ function mostrar4() {
     imgLogin.style.width = "300px"
     imgLogin.style.zIndex = "9"
     galleryDiv.style.border = "none"
-    document.getElementById("text-in-gallery").style.display = "none"
+   
 
     let existeParagrafo = document.querySelector("p")
     if(existeParagrafo){
@@ -164,7 +161,8 @@ function mostrar5() {
     imgSpotify.style.width = "300px"
     imgSpotify.style.zIndex = "9"
     galleryDiv.style.border = "none"
-    document.getElementById("text-in-gallery").style.display = "none"
+
+    
 
     let existeParagrafo = document.querySelector("p")
     if(existeParagrafo){
@@ -181,6 +179,45 @@ function mostrar5() {
     paragrafo.style.margin = "45px auto"
 } 
 
+///
+
+
+const slider = document.querySelectorAll(".certs")
+const btnPrev = document.getElementById("prev-button")
+const btnNext = document.getElementById("next-button")
+
+let currentSlide = 0
+
+function hideSlider() {
+    slider.forEach(item => item.classList.remove('on'));
+}
+
+function showSlider(){
+    slider[currentSlide].classList.add('on')
+}
+
+function nextSlider(){
+    hideSlider()
+    if(currentSlide == slider.length - 1){
+        currentSlide = 0
+    } else {
+        currentSlide++
+    }
+    showSlider()
+}
+
+function prevSlider(){
+    hideSlider()
+    if(currentSlide == 0){
+        currentSlide = slider.length - 1;
+    } else {
+        currentSlide--
+    }
+    showSlider()
+}
+
+btnNext.addEventListener('click', nextSlider)
+btnPrev.addEventListener('click', prevSlider)
 
 
 
