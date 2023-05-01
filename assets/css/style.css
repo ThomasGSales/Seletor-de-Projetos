@@ -21,19 +21,17 @@ a{
 a[href="#"]{
     transition-duration: 1.5s;
 }
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+
 .main {
     animation: fade-in 2s ease-out forwards;
 }
 
 @keyframes fade-in {
-    from {
+    0% {
         opacity: 0;
-    } to {
+    } 50% {
+        opacity: 0;
+    } 100% {
         opacity: 1;
     }
 }
@@ -70,11 +68,10 @@ header {
     left: -650px;
     transform-style: preserve-3d;
     animation-fill-mode: forwards;
-    animation: move 50s infinite linear;
+    animation: move 20s infinite linear;
 }
 .wrapper:nth-child(2) {
-    animation: move 50s infinite linear;
-    animation-delay: 6s;
+    animation: move 20s infinite linear;
 }
 
 .side{
@@ -86,7 +83,7 @@ header {
     height: 100%;
     width: 100%;
     opacity: 0;
-    animation: fade 12s infinite ;
+    animation: fade 15s infinite linear;
 }
 .side-right {
     transform: rotateY(90deg) translateZ(500px);
