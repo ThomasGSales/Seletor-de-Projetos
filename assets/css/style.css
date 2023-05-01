@@ -47,11 +47,6 @@ header {
     height: 7vh;
     z-index: 999;
 }
-h1 {
-    color: #77ffc0;
-    text-align: center;
-    letter-spacing: 2px;
-}
 
 .animated-back {
     display: flex;
@@ -60,9 +55,9 @@ h1 {
 }
 .container-space {
     position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    perspective: 5px;
+    display: flex;
+    align-items: center;
+    perspective: 2px;
     top: -300px;
     perspective-origin: 50% 50%;
     z-index: -1;
@@ -72,13 +67,13 @@ h1 {
     width: 100vw;
     height: 100vh;
     top: -500px;
-    left: -500px;
+    left: -650px;
     transform-style: preserve-3d;
     animation-fill-mode: forwards;
-    animation: move 12s infinite linear;
+    animation: move 50s infinite linear;
 }
 .wrapper:nth-child(2) {
-    animation: move 12s infinite linear;
+    animation: move 50s infinite linear;
     animation-delay: 6s;
 }
 
@@ -91,12 +86,7 @@ h1 {
     height: 100%;
     width: 100%;
     opacity: 0;
-    animation-delay: 0;
-    animation: fade 12s infinite linear;
-}
-.wrapper:nth-child(2) .side {
-    animation-delay: 6s;
-
+    animation: fade 12s infinite ;
 }
 .side-right {
     transform: rotateY(90deg) translateZ(500px);
@@ -138,10 +128,10 @@ img {
     margin: 7% auto;
     transition: 0.5s;
     border-radius: 10px;
-    box-shadow: 0 0 0px 1.5px #77ffc0;
+    box-shadow: 0 0 0px 1.5px #ffa600;
 }
 img:hover{
-    box-shadow: -10px 15px 0px 0px #77ffc0;
+    box-shadow: -10px 15px 0px 0px #ffa600;
     transform: scale(1.05, 1.05);
     cursor: pointer;
 }
@@ -150,11 +140,11 @@ img:hover{
     margin: 7% auto;
     width: 300px;
     height: 200px;
-    border: 3px dotted #77ffc0;
+    border: 3px dotted #ffa600;
     background: none;
 }
 #gallery p {
-    color: #77ffc0;
+    color: #ffa600;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,13 +162,13 @@ img:hover{
     margin: auto;
     width: 70vw;
     height: 0.5vh;
-    background-color: #77ffc0;
+    background-color: #ffa600;
 }
 .points {
     padding: 10px;
     border-radius: 50px;
     border: none;
-    background-color: #77ffc0;
+    background-color: #ffa600;
     transition: 0.5s;
 }
 .points:hover {
@@ -203,11 +193,11 @@ img:hover{
     animation: pulser_animation 5s ease infinite;
 }
 .text-linha p{
-    font-size: 16px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #77ffc0;
+    color: #ffa600;
     
 }
 
@@ -229,12 +219,12 @@ img:hover{
     z-index: 10;
 }
 
-.pre-rodape a{
+.pre-rodape a i{
     position: relative;
-    left: 49.5%;
+    left: 49%;
     font-size: 42px;
     letter-spacing: 2px;
-    color: #77ffc0;
+    color: #ffa600;
     cursor: pointer;
     transition: 0.2s;
     animation: pre_rodape 5s infinite linear;
@@ -255,13 +245,17 @@ img:hover{
 
 .footer {
     background-color: rgb(12, 14, 36);
-    width: 100vw;
+    width: 100%;
     height: 100%;
     position: relative;
     top: 100px;
-    z-index: 1;
-    
-    
+    z-index: 1;   
+}
+h2 {
+    color: #ffa600;
+    text-align: center;
+    padding-top: 150px;
+    font-size: 50px;
 }
 .certificados-container{
    display: flex;
@@ -291,19 +285,44 @@ img:hover{
     opacity: 1;
 }
 .certificados button{
-    color: #77ffc0;
-    font-size: 60px;
+    color: #ffa600;
+    font-size: 100px;
     position: relative;
     border: none;
-    width: 100px;
-    height: 100px;
-    background-color:transparent;
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     z-index: 9;
-    left: -49%;
+    left: -51%;
 }
+
 .certificados button:last-of-type{
-    left: 49%;
+    left: 51%;
+}
+
+.contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.contato a i{   
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    padding: 20px 15px;
+    transition: 0.3s;
+}
+
+.contato a i:hover{
+    transform: scale(1.09, 1.09);
+    color: #ffa600;
 }
 
 
